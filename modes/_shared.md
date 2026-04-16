@@ -21,6 +21,20 @@
 **RULE: For article/project metrics, article-digest.md takes precedence over cv.md.**
 **RULE: Read _profile.md AFTER this file. User customizations in _profile.md override defaults here.**
 
+## OUTPUT BREVITY (CRITICAL)
+
+**All user-facing output MUST be extremely concise.** The full analysis happens internally but the output shown to the user must be minimal. Save tokens.
+
+- Reports saved to `reports/` can be detailed (they're written to files, not shown).
+- But everything printed to the user's screen must be SHORT.
+- Use tables, not paragraphs.
+- No explanations the user didn't ask for.
+- No restating what the JD said.
+- No filler, no transitions, no "Let me analyze this for you."
+- Max 20-30 lines of visible output per evaluation.
+- The PDF generation, keyword injection, and resume tailoring work fully — just don't narrate the process.
+- **Reports saved to files must ALSO be compact.** Tables and bullet lists only — no paragraph-style prose in any section. If it doesn't fit in a table row, it's too long.
+
 ---
 
 ## Scoring System
@@ -29,12 +43,27 @@ The evaluation uses 6 blocks (A-F) with a global score of 1-5:
 
 | Dimension | What it measures |
 |-----------|-----------------|
-| Match con CV | Skills, experience, proof points alignment |
+| Regulatory/Quality Documentation Relevance | How central is regulatory, quality, or compliance documentation to this role? |
+| Medical/Scientific Writing Relevance | Does the role involve clinical, regulatory, or scientific writing as a core function? |
+| CV Match | Skills, experience, proof points alignment with JD requirements |
 | North Star alignment | How well the role fits the user's target archetypes (from _profile.md) |
+| Industry Fit | Is this in digital health, healthtech, medtech, biotech, SaMD, or adjacent regulated environment? |
+| Seniority Match | Is the level appropriate (Associate/Specialist, not too senior or too junior)? |
+| Location / Work Mode Fit | Remote, hybrid-Boston, or relocation required? |
 | Comp | Salary vs market (5=top quartile, 1=well below) |
-| Cultural signals | Company culture, growth, stability, remote policy |
-| Red flags | Blockers, warnings (negative adjustments) |
+| Red flags | Misleading title, wrong industry, over-senior, pure engineering, generic ops (negative adjustments) |
 | **Global** | Weighted average of above |
+
+**Scoring weights (for global calculation):**
+- Regulatory/Quality Documentation Relevance: 20%
+- Medical/Scientific Writing Relevance: 15%
+- CV Match: 20%
+- North Star alignment: 15%
+- Industry Fit: 10%
+- Seniority Match: 10%
+- Location / Work Mode Fit: 5%
+- Comp: 5%
+- Red flags: deduction (0 to -1.0 from global)
 
 **Score interpretation:**
 - 4.5+ → Strong match, recommend applying immediately
@@ -48,12 +77,21 @@ Classify every offer into one of these types (or hybrid of 2):
 
 | Archetype | Key signals in JD |
 |-----------|-------------------|
-| AI Platform / LLMOps | "observability", "evals", "pipelines", "monitoring", "reliability" |
-| Agentic / Automation | "agent", "HITL", "orchestration", "workflow", "multi-agent" |
-| Technical AI PM | "PRD", "roadmap", "discovery", "stakeholder", "product manager" |
-| AI Solutions Architect | "architecture", "enterprise", "integration", "design", "systems" |
-| AI Forward Deployed | "client-facing", "deploy", "prototype", "fast delivery", "field" |
-| AI Transformation | "change management", "adoption", "enablement", "transformation" |
+| Regulatory Affairs / Regulatory Documentation | "regulatory affairs", "CTD", "eCTD", "510(k)", "IND", "NDA", "BLA", "submission", "dossier", "regulatory intelligence", "labeling", "21 CFR", "EU MDR", "regulatory compliance" |
+| Medical Writer / Clinical-Regulatory Writer | "medical writer", "medical writing", "ICF", "informed consent", "protocol", "CSR", "clinical study report", "safety narrative", "scientific communication", "literature review", "plain language", "patient-facing" |
+| QA Documentation / Quality Systems / Document Control | "CAPA", "SOP", "deviation", "document control", "change control", "quality systems", "audit", "nonconformance", "root cause", "corrective action", "ISO 14971", "GMP", "quality assurance documentation" |
+| Regulatory Operations / Submission Support | "regulatory operations", "submission support", "eCTD publishing", "dossier assembly", "regulatory project", "submission coordinator", "publishing", "regulatory tracking" |
+| Post-Market Surveillance Documentation | "post-market", "PMS", "vigilance", "complaint", "MAUDE", "adverse event reporting", "MDR reporting", "safety signal", "surveillance plan", "surveillance report" |
+| Digital Health Regulatory / Content | "SaMD", "digital health", "connected device", "RPM", "remote patient monitoring", "AI in healthcare", "digital therapeutics", "clinical software", "health tech regulatory" |
+
+**Deprioritization signals (down-rank or exclude):**
+- Software/product engineering roles (even at healthcare companies)
+- Pure AI/ML engineering, data science, model training roles
+- Generic operations without regulatory/quality/documentation focus
+- Generic content marketing or copywriting without regulated/scientific context
+- Senior Director / VP / Head of Regulatory Strategy (too senior for candidate level)
+- CRA / clinical monitoring roles (field-based, not documentation)
+- Sales, BD, or commercial roles
 
 After detecting archetype, read `modes/_profile.md` for the user's specific framing and proof points for that archetype.
 

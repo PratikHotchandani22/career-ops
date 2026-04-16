@@ -1,157 +1,219 @@
-# Modo: oferta — Evaluación Completa A-F
+# Mode: oferta — Full Evaluation A-F
 
-Cuando el candidato pega una oferta (texto o URL), entregar SIEMPRE los 6 bloques:
+## OUTPUT RULE: Be extremely brief in user-facing output. Save all detail to the report file. Show the user ONLY a compact summary (see "User-Facing Output" section at the bottom).
 
-## Paso 0 — Detección de Arquetipo
+When the candidate pastes a job offer (text or URL), ALWAYS run all 6 blocks internally:
 
-Clasificar la oferta en uno de los 6 arquetipos (ver `_shared.md`). Si es híbrido, indicar los 2 más cercanos. Esto determina:
-- Qué proof points priorizar en bloque B
-- Cómo reescribir el summary en bloque E
-- Qué historias STAR preparar en bloque F
+## Step 0 — Archetype Detection
 
-## Bloque A — Resumen del Rol
+Classify the offer into one of the 6 archetypes (see `_shared.md`). If hybrid, indicate the 2 closest. This determines:
+- Which proof points to prioritize in Block B
+- How to rewrite the summary in Block E
+- Which STAR stories to prepare in Block F
 
-Tabla con:
-- Arquetipo detectado
-- Domain (platform/agentic/LLMOps/ML/enterprise)
-- Function (build/consult/manage/deploy)
+## Block A — Role Summary
+
+Table with:
+- Detected archetype
+- Domain (regulatory/quality/clinical/digital health)
+- Function (write/document/coordinate/review/submit)
 - Seniority
 - Remote (full/hybrid/onsite)
-- Team size (si se menciona)
-- TL;DR en 1 frase
+- Team size (if mentioned)
+- TL;DR in 1 sentence
 
-## Bloque B — Match con CV
+## Block B — CV Match
 
-Lee `cv.md`. Crea tabla con cada requisito del JD mapeado a líneas exactas del CV.
+Read `cv.md`. Create a table mapping each JD requirement to exact lines from the CV.
 
-**Adaptado al arquetipo:**
-- Si FDE → priorizar proof points de delivery rápida y client-facing
-- Si SA → priorizar diseño de sistemas e integrations
-- Si PM → priorizar product discovery y métricas
-- Si LLMOps → priorizar evals, observability, pipelines
-- Si Agentic → priorizar multi-agent, HITL, orchestration
-- Si Transformation → priorizar change management, adoption, scaling
+**Adapted to archetype:**
+- If Regulatory Affairs → prioritize CTD/eCTD authoring, 510(k), IND/NDA/BLA, dossier organization, regulatory frameworks (FDA, ICH, EU MDR)
+- If Medical Writer → prioritize ICF authoring, protocol inputs, safety narratives, plain-language writing, literature review, compliance-aware content
+- If QA Documentation → prioritize CAPA documentation, SOP writing, root cause analysis, deviation investigations, document control, audit readiness
+- If Regulatory Operations → prioritize cross-functional coordination, dossier assembly, submission workflows, trackers, deadline management
+- If Post-Market Surveillance → prioritize PMS plans/reports, MAUDE synthesis, complaint documentation, safety signals, vigilance reporting
+- If Digital Health Regulatory → prioritize SaMD regulatory, RPM documentation, digital health content, labeling-aware communication
 
-Sección de **gaps** con estrategia de mitigación para cada uno. Para cada gap:
-1. ¿Es un hard blocker o un nice-to-have?
-2. ¿Puede el candidato demostrar experiencia adyacente?
-3. ¿Hay un proyecto portfolio que cubra este gap?
-4. Plan de mitigación concreto (frase para cover letter, proyecto rápido, etc.)
+**Gaps** section with mitigation strategy for each. For each gap:
+1. Is it a hard blocker or nice-to-have?
+2. Can the candidate demonstrate adjacent experience?
+3. Is there a portfolio project that covers this gap?
+4. Concrete mitigation plan (phrase for cover letter, quick project, etc.)
 
-## Bloque C — Nivel y Estrategia
+## Block C — Level and Strategy
 
-1. **Nivel detectado** en el JD vs **nivel natural del candidato para ese arquetipo**
-2. **Plan "vender senior sin mentir"**: frases específicas adaptadas al arquetipo, logros concretos a destacar, cómo posicionar la experiencia de founder como ventaja
-3. **Plan "si me downlevelan"**: aceptar si comp es justa, negociar review a 6 meses, criterios de promoción claros
+1. **Detected level** in the JD vs **candidate's natural level for that archetype**
+2. **Plan "position at level without overstating"**: specific phrases adapted to archetype, concrete achievements to highlight, how to position M.S. Regulatory Affairs + B.Pharm as advantage
+3. **Plan "if downleveled"**: accept if comp is fair, negotiate 6-month review, clear promotion criteria
 
-## Bloque D — Comp y Demanda
+## Block D — Comp and Demand
 
-Usar WebSearch para:
-- Salarios actuales del rol (Glassdoor, Levels.fyi, Blind)
-- Reputación de compensación de la empresa
-- Tendencia de demanda del rol
+Use WebSearch for:
+- Current salaries for the role (Glassdoor, Payscale, salary surveys)
+- Company compensation reputation
+- Demand trend for the role
 
-Tabla con datos y fuentes citadas. Si no hay datos, decirlo en vez de inventar.
+Table with data and cited sources. If no data available, say so instead of inventing.
 
-## Bloque E — Plan de Personalización
+## Block E — Customization Plan
 
-| # | Sección | Estado actual | Cambio propuesto | Por qué |
-|---|---------|---------------|------------------|---------|
+| # | Section | Current state | Proposed change | Why |
+|---|---------|---------------|-----------------|-----|
 | 1 | Summary | ... | ... | ... |
 | ... | ... | ... | ... | ... |
 
-Top 5 cambios al CV + Top 5 cambios a LinkedIn para maximizar match.
+Top 5 CV changes + Top 5 LinkedIn changes to maximize match.
 
-## Bloque F — Plan de Entrevistas
+## Block F — Interview Plan
 
-6-10 historias STAR+R mapeadas a requisitos del JD (STAR + **Reflection**):
+6-10 STAR+R stories mapped to JD requirements (STAR + **Reflection**):
 
-| # | Requisito del JD | Historia STAR+R | S | T | A | R | Reflection |
-|---|-----------------|-----------------|---|---|---|---|------------|
+| # | JD Requirement | STAR+R Story | S | T | A | R | Reflection |
+|---|---------------|--------------|---|---|---|---|------------|
 
 The **Reflection** column captures what was learned or what would be done differently. This signals seniority — junior candidates describe what happened, senior candidates extract lessons.
 
 **Story Bank:** If `interview-prep/story-bank.md` exists, check if any of these stories are already there. If not, append new ones. Over time this builds a reusable bank of 5-10 master stories that can be adapted to any interview question.
 
-**Seleccionadas y enmarcadas según el arquetipo:**
-- FDE → enfatizar velocidad de entrega y client-facing
-- SA → enfatizar decisiones de arquitectura
-- PM → enfatizar discovery y trade-offs
-- LLMOps → enfatizar métricas, evals, production hardening
-- Agentic → enfatizar orchestration, error handling, HITL
-- Transformation → enfatizar adopción, cambio organizacional
+**Selected and framed per archetype:**
+- Regulatory Affairs → emphasize submission documentation accuracy, regulatory framework knowledge, dossier organization
+- Medical Writer → emphasize writing clarity, plain-language communication, first-pass quality, compliance tone
+- QA Documentation → emphasize audit readiness, traceability, root cause rigor, process improvement
+- Regulatory Operations → emphasize coordination, deadline management, cross-functional workflow efficiency
+- Post-Market Surveillance → emphasize data synthesis, risk language, surveillance documentation completeness
+- Digital Health Regulatory → emphasize bridging regulatory knowledge with tech product needs
 
-Incluir también:
-- 1 case study recomendado (cuál de sus proyectos presentar y cómo)
-- Preguntas red-flag y cómo responderlas (ej: "¿por qué vendiste tu empresa?", "¿tienes equipo de reports?")
+Also include:
+- 1 recommended case study (which project to present and how)
+- Red-flag questions and how to answer them (e.g., "Do you have industry experience beyond internships?", "How familiar are you with [specific system]?")
 
 ---
 
-## Post-evaluación
+## Post-Evaluation
 
-**SIEMPRE** después de generar los bloques A-F:
+**ALWAYS** after generating blocks A-F:
 
-### 1. Guardar report .md
+### 1. Save report .md
 
-Guardar evaluación completa en `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
+Save the complete evaluation to `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
 
-- `{###}` = siguiente número secuencial (3 dígitos, zero-padded)
-- `{company-slug}` = nombre de empresa en lowercase, sin espacios (usar guiones)
-- `{YYYY-MM-DD}` = fecha actual
+- `{###}` = next sequential number (3 digits, zero-padded)
+- `{company-slug}` = company name in lowercase, no spaces (use hyphens)
+- `{YYYY-MM-DD}` = current date
 
-**Formato del report:**
+**Report format (KEEP REPORTS COMPACT — tables and bullets, no prose):**
 
 ```markdown
-# Evaluación: {Empresa} — {Rol}
+# {Company} — {Role}
 
-**Fecha:** {YYYY-MM-DD}
-**Arquetipo:** {detectado}
-**Score:** {X/5}
-**PDF:** {ruta o pendiente}
-
----
-
-## A) Resumen del Rol
-(contenido completo del bloque A)
-
-## B) Match con CV
-(contenido completo del bloque B)
-
-## C) Nivel y Estrategia
-(contenido completo del bloque C)
-
-## D) Comp y Demanda
-(contenido completo del bloque D)
-
-## E) Plan de Personalización
-(contenido completo del bloque E)
-
-## F) Plan de Entrevistas
-(contenido completo del bloque F)
-
-## G) Draft Application Answers
-(solo si score >= 4.5 — borradores de respuestas para el formulario de aplicación)
+**Date:** {YYYY-MM-DD} | **Archetype:** {detected} | **Score:** {X/5} | **Verdict:** {APPLY/CONSIDER/SKIP}
+**URL:** {url}
+**PDF:** {path or pending}
 
 ---
 
-## Keywords extraídas
-(lista de 15-20 keywords del JD para ATS optimization)
+## A) Role Summary
+
+| Field | Value |
+|-------|-------|
+| Archetype | ... |
+| Domain | ... |
+| Seniority | ... |
+| Remote | ... |
+| TL;DR | 1 sentence |
+
+## B) CV Match
+
+| JD Requirement | CV Evidence | Match |
+|---------------|-------------|-------|
+| ... | ... | ✅/⚠️/❌ |
+
+**Gaps:** (bullet list, 1 line each with blocker/nice-to-have tag)
+
+## C) Level
+
+- JD level: ...
+- Candidate level: ...
+- Positioning: 1-2 sentences max
+
+## D) Comp
+
+| Data Point | Value | Source |
+|-----------|-------|--------|
+| Market range | ... | ... |
+| Company rep | ... | ... |
+
+## E) CV Tailoring
+
+| # | Section | Change | Why |
+|---|---------|--------|-----|
+| 1 | ... | ... | ... |
+
+## F) Interview Prep
+
+| # | JD Requirement | STAR Story (1 line) |
+|---|---------------|---------------------|
+| 1 | ... | ... |
+
+**Case study:** 1 line
+**Red-flag Qs:** bullet list
+
+## G) Draft Answers
+(only if score >= 4.5 — 2-4 sentences per answer, no preamble)
+
+---
+
+## Keywords
+(comma-separated list, no explanations)
 ```
 
-### 2. Registrar en tracker
+**RULE: No paragraph-style writing in reports. Every section uses a table or bullet list. If it can't fit in a table row, it's too long.**
 
-**SIEMPRE** registrar en `data/applications.md`:
-- Siguiente número secuencial
-- Fecha actual
-- Empresa
-- Rol
-- Score: promedio de match (1-5)
-- Estado: `Evaluada`
-- PDF: ❌ (o ✅ si auto-pipeline generó PDF)
-- Report: link relativo al report .md (ej: `[001](reports/001-company-2026-01-01.md)`)
+### 2. Register in tracker
 
-**Formato del tracker:**
+**ALWAYS** register in `data/applications.md`:
+- Next sequential number
+- Current date
+- Company
+- Role
+- Score: match average (1-5)
+- Status: `Evaluated`
+- PDF: ❌ (or ✅ if auto-pipeline generated PDF)
+- Report: relative link to the report .md (e.g., `[001](reports/001-company-2026-01-01.md)`)
+
+**Tracker format:**
 
 ```markdown
-| # | Fecha | Empresa | Rol | Score | Estado | PDF | Report |
+| # | Date | Company | Role | Score | Status | PDF | Report |
 ```
+
+---
+
+## User-Facing Output (CRITICAL — this is ALL the user sees)
+
+**Do NOT print the full A-F blocks to the user.** Save them to the report file only. Show the user ONLY this compact summary:
+
+```
+## {Company} — {Role}
+
+**Score: {X.X}/5** | {Archetype} | {Remote/Hybrid/Onsite}
+**Verdict:** {APPLY / CONSIDER / SKIP} — {1 sentence why}
+
+| Dimension | Score |
+|-----------|-------|
+| Reg/Quality Doc Relevance | X/5 |
+| Writing Relevance | X/5 |
+| CV Match | X/5 |
+| North Star | X/5 |
+| Industry Fit | X/5 |
+| Seniority | X/5 |
+
+**Top 3 matches:** {bullet list, 1 line each}
+**Key gaps:** {bullet list, 1 line each, or "None"}
+**PDF:** ✅ saved to output/... (or ❌ score too low)
+**Report:** saved to reports/...
+```
+
+That's it. No Block A narrative, no Block C strategy text, no Block D salary research paragraphs, no Block F STAR stories shown. All of that goes into the report file for reference if needed.
+
+If the user wants detail on a specific block, they ask — then show just that block.

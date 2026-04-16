@@ -1,47 +1,47 @@
-# Modo: deep — Deep Research Prompt
+# Mode: deep — Deep Research Prompt
 
-Genera un prompt estructurado para Perplexity/Claude/ChatGPT con 6 ejes:
+Generates a structured prompt for Perplexity/Claude/ChatGPT with 6 axes:
 
 ```
-## Deep Research: [Empresa] — [Rol]
+## Deep Research: [Company] — [Role]
 
-Contexto: Estoy evaluando una candidatura para [rol] en [empresa]. Necesito información accionable para la entrevista.
+Context: I am evaluating an application for [role] at [company]. I need actionable information for the interview.
 
-### 1. Estrategia AI
-- ¿Qué productos/features usan AI/ML?
-- ¿Cuál es su stack de AI? (modelos, infra, tools)
-- ¿Tienen blog de engineering? ¿Qué publican?
-- ¿Qué papers o talks han dado sobre AI?
+### 1. Regulatory and Quality Landscape
+- What products/services does this company have under regulatory oversight?
+- What regulatory frameworks apply (FDA, EU MDR, ICH, etc.)?
+- Do they have FDA clearances/approvals? 510(k)s? PMA? De Novo?
+- What does their quality system look like? Any FDA warning letters or recalls?
+- Do they have a medical writing or regulatory affairs team?
 
-### 2. Movimientos recientes (últimos 6 meses)
-- ¿Contrataciones relevantes en AI/ML/product?
-- ¿Acquisitions o partnerships?
-- ¿Product launches o pivots?
-- ¿Rondas de funding o cambios de liderazgo?
+### 2. Recent Moves (last 6 months)
+- Relevant hires in regulatory, quality, medical writing, or clinical?
+- Acquisitions or partnerships?
+- Product launches, FDA submissions, or regulatory milestones?
+- Funding rounds or leadership changes?
 
-### 3. Cultura de engineering
-- ¿Cómo shipean? (cadencia de deploy, CI/CD)
-- ¿Mono-repo o multi-repo?
-- ¿Qué lenguajes/frameworks usan?
-- ¿Remote-first o office-first?
-- ¿Glassdoor/Blind reviews sobre eng culture?
+### 3. Company Culture and Team
+- How do they ship? (regulated cadence, design controls, etc.)
+- What documentation systems do they use? (Veeva, MasterControl, etc.)
+- Remote-first or office-first?
+- Glassdoor/Blind reviews about quality/regulatory culture?
 
-### 4. Retos probables
-- ¿Qué problemas de scaling tienen?
-- ¿Reliability, cost, latency challenges?
-- ¿Están migrando algo? (infra, models, platforms)
-- ¿Qué pain points menciona la gente en reviews?
+### 4. Likely Challenges
+- What regulatory challenges are they facing?
+- Any compliance issues, warning letters, or audit findings?
+- Are they expanding into new markets (EU, APAC)?
+- What pain points do people mention in reviews?
 
-### 5. Competidores y diferenciación
-- ¿Quiénes son sus main competitors?
-- ¿Cuál es su moat/diferenciador?
-- ¿Cómo se posicionan vs competencia?
+### 5. Competitors and Differentiation
+- Who are their main competitors?
+- What is their moat/differentiator?
+- How do they position vs competition?
 
-### 6. Ángulo del candidato
-Dado mi perfil (read from cv.md and profile.yml for specific experience):
-- ¿Qué valor único aporto a este equipo?
-- ¿Qué proyectos míos son más relevantes?
-- ¿Qué historia debería contar en la entrevista?
+### 6. Candidate Angle
+Given my profile (read from cv.md and profile.yml for specific experience):
+- What unique value do I bring to this team?
+- Which of my projects are most relevant?
+- What story should I tell in the interview?
 ```
 
-Personalizar cada sección con el contexto específico de la oferta evaluada.
+Customize each section with the specific context of the evaluated offer.
